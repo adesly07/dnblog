@@ -3,20 +3,20 @@ body {
     
 }
 .navbar{
-    background-image: linear-gradient(to right, #5c60f5, #655ff7, #6d5df9, #765cfb, #7e5afd, #b64bee, #e038db, #ff22c4, #ff278e, #e038db, #e038db, #e038db);
+    background-color: #5c60f5;
     
 }
 .navbar .btnlink a {
 
     margin-right: 1.5rem;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 1em;
   }
   
   .navbar .btnlink a:hover {
-    background-color: #ff22c4;
-    color: #fff;
+    background-color: #fff;
+    color: #5c60f5;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1em;
@@ -34,7 +34,7 @@ body {
    color: rgb(255, 255, 255);
 }
 .navbar .icons a:hover {
-    color: rgb(245, 185, 185);
+    color: #c7c8eb;
  }
 .navbar .icons .icon:first-child {
     display: inline-block;
@@ -45,7 +45,10 @@ body {
 
 
 /* Small devices (landscape phones, 576px and lower) */
-@media (max-width: 576px) {  
+@media (max-width: 768px) {  
+    .navbar{
+        background-color: #5c60f5;
+    }
     .navbar .navbar-brand {
         margin-right: 1rem;
     }
@@ -55,15 +58,15 @@ body {
     }
     .navbar .btnlink a {
         padding: 10px;
-        color: #000;
+        color: #fff;
         text-decoration: none;
         font-size: 1em;
       }
       
     .navbar .btnlink a:hover {
     
-        background-color: #ff22c4;
-        color: #fff;
+        background-color: #fff;
+        color: #5c60f5;
         text-decoration: none;
         border-radius: 5px;
         font-size: 1em;
@@ -105,7 +108,7 @@ body {
 .animet-text li {
     list-style: none;
     font-size: 25px;
-    color: #2c2c51;
+    color: #5c60f5;
     font-family: monospace;
     font-weight: 600;
     position: relative;
@@ -129,7 +132,7 @@ body {
     height: 40px;
     width: 100%;
     background: #fff;
-    border-left: 3px solid #000000;
+    border-left: 2px solid #000000;
     animation: typing 3s steps(10) infinite;
   }
   
@@ -186,21 +189,50 @@ body {
         display: block;
         margin: 0 auto;
     }
-     
+    .main-div{
+        display: flex;
+    }
+    .main-div .animet-text {
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden;
+        padding: 0;
+      }
+    .animet-text li {
+        list-style: none;
+        font-size: 18px;
+        color: #5c60f5;
+        font-family: monospace;
+        font-weight: 600;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+      }
+      .animet-text li span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 30px;
+        width: 100%;
+        background: #fff;
+        border-left: 1px solid #000000;
+        animation: typing 3s steps(10) infinite;
+      }
 }
 /* head section ends */
 /* popular section starts */
 .latest {
     display: flex;
     padding: 2rem;
-    background-color: rgb(233, 239, 245);
+    background-color: #000;
 }
 
-.latepost h1{
+.latepost h1 {
     font-family: monospace;
     margin-top: 2rem;
     text-align: center;
-    color: #ff22c4;
+    color: #fff;
     font-weight: 700;
     font-size: 2rem;
     text-transform: uppercase;
@@ -209,20 +241,22 @@ body {
     transition: all 0.4s ease 0s;
     
 }
-.latepost h1:before{
+/*.latepost h1:before{
+    
     width: 28px;
     height: 10px;
     display: block;
     content: "";
     position: absolute;
+    margin-bottom: -5.5rem;
     bottom: 3px;
     left: 50%;
     margin-left: -14px;
 
-}
+}*/
 .latepost h1:after{
     width: 100px;
-    height: 1px;
+    height: 2px;
     display: block;
     content: "";
     position: relative;
@@ -242,23 +276,39 @@ h1:before,
 h1:after {
   background-color: #5c60f5;
 }
-.rmore{
+.headline {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 0rem;
+    font-size: 15px;
+}
+.headline:hover {
+    text-decoration: none;
+    color: rgb(211, 205, 205);
+}
+.line{
+    border: 1px solid #646363;
+}
+.more{
+    text-align: right;
+}
+.more .rmore{
     margin-top: 1rem;
     padding: 8px;
-    color: #fff;
+    color: #5c60f5;
     text-decoration: none;
-    font-size: 1em;
-    background-color: #ff22c4;
+    font-size: 0.75em;
+    background-color: #fff;
 }
-.rmore:hover{
+.more .rmore:hover{
     padding: 8px;
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
-    background-color: rgb(224, 147, 160);
+    font-size: 0.75em;
+    background-color: #5c60f5
 }
 .latest .blog {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
 }
 .latest .blog-post p .pimg {
@@ -272,8 +322,11 @@ h1:after {
     padding: 2rem;
     background-color: #fff;
 }
+.poetry h1{
+    color: #5c60f5
+}
 .poetry .blog {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
 }
 .poetry .blog-post p .pimg {
@@ -299,7 +352,10 @@ h1:after {
 .fiction {
     display: flex;
     padding: 2rem;
-    background-color: rgb(233, 239, 245);
+    background-color: #000
+}
+.fiction h1{
+    color: white;
 }
 .fiction .card {
     border: none;
@@ -309,12 +365,12 @@ h1:after {
 
 }
 .fiction .card:hover {
-    box-shadow: 0 0 20px 0 #ff22c4;
+    box-shadow: 0 0 20px 0 #5c60f5;
     cursor: pointer;
     transform: scale(1.01);
     transform: translate(-0.1rem, -0.1rem);
     transition: all 0.5s ease;
-    box-shadow: 0 0 .2rem 0 #ff22c4;
+    box-shadow: 0 0 .2rem 0 #5c60f5;
 }
 
 .fiction .card .title{
@@ -336,14 +392,74 @@ h1:after {
     margin: 1rem;
     font-size: 1rem;
 }
+.fiction .card p{
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+.bcard {
+    text-align: right;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.bcard .rmore{
+    margin-top: 1rem;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: #5c60f5;
+    
+}
+.bcard .rmore:hover{
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: #b2b5f3;
+}
 .article {
     display: flex;
     padding: 2rem;
     background-color: #fff;
+    
+}
+.article h1{
+    color: #5c60f5;
 }
 .article .blog {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
+}
+ 
+.article .blog .headline {
+    text-decoration: none;
+    color: #2c2b2b;
+    margin-bottom: 0rem;
+    font-size: 15px;
+}
+.article .blog .headline:hover {
+    text-decoration: none;
+    color: rgb(133, 128, 128);
+}
+.bart {
+    text-align: right;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.bart .rmore{
+    margin-top: 1rem;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: #ff22c4;
+}
+.bart .rmore:hover{
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: rgb(224, 147, 160);
 }
 .article .blog-post p .pimg {
     margin-right: 1rem;
@@ -354,11 +470,33 @@ h1:after {
 .movie {
     display: flex;
     padding: 2rem;
-    background-color: rgb(233, 239, 245);
+    background-color: #000;
+}
+.movie .blog .bname{
+    color: white;
+    text-decoration: none;
+}
+.movie .blog .rmore{
+    margin-top: 1rem;
+    padding: 8px;
+    color: #ff22c4;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: #fff;
+    
+}
+.movie .blog .rmore:hover{
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: rgb(224, 147, 160);
 }
 .movie .blog {
-    margin-bottom: 2rem;
-
+    margin-bottom: 4rem;
+}
+.movie .blog .likeme{
+    margin-left: 1rem;
 }
 .movie .blog-post p .pimg {
     margin-right: 1rem;
@@ -366,19 +504,42 @@ h1:after {
     height: auto;
     float: left;
 }
+
 .lifestyle {
     display: flex;
     padding: 2rem;
     background-color: #fff;
 }
+.lifestyle h1{
+    color: #5c60f5;
+}
 .lifestyle .blog {
+
     margin-bottom: 2rem;
+    padding: 1rem;
 
 }
-.lifestyle .blog-post p .pimg {
+.blog .rmore{
+    margin-top: 1rem;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: #ff22c4;
+}
+.blog .rmore:hover{
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75em;
+    background-color: rgb(224, 147, 160);
+}
+.lifestyle .blog-post .pimg {
     margin-right: 1rem;
-    width: auto;
-    height: auto;
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    display: block;
     float: left;
 }
 /* Small devices (landscape phones, 576px and lower) */
@@ -484,7 +645,7 @@ h1:after {
 /* footer section starts */
 .footer {
     padding: 3rem 0 2rem;
-   background-image: linear-gradient(to right, #e038db, #ff22c4, #ff278e, #e038db, #ff22c4, #ff278e, #e038db, #ff22c4, #ff278e, #e038db, #e038db, #e038db);
+    background-color: #5c60f5;
 }
 
 .footer .details {
