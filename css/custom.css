@@ -362,7 +362,7 @@ h1:after {
     margin-top: 2rem;
     text-align: left;
     margin-bottom: 2rem;
-
+    padding:1rem
 }
 .fiction .card:hover {
     box-shadow: 0 0 20px 0 #5c60f5;
@@ -416,6 +416,9 @@ h1:after {
     text-decoration: none;
     font-size: 0.75em;
     background-color: #b2b5f3;
+}
+.likeme{
+    margin-left: 1rem;
 }
 .article {
     display: flex;
@@ -495,9 +498,7 @@ h1:after {
 .movie .blog {
     margin-bottom: 4rem;
 }
-.movie .blog .likeme{
-    margin-left: 1rem;
-}
+
 .movie .blog-post p .pimg {
     margin-right: 1rem;
     width: auto;
